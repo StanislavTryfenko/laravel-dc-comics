@@ -1,0 +1,25 @@
+@extends('layouts.app')
+
+@section('content')
+
+<div class="container py-5">
+    <div class="row">
+        <div class="col">
+            <img src="{{$comic->thumb}}" alt="">
+        </div>
+        <div class="col">
+            <h2>{{$comic->title}}</h2>
+            <p>{{$comic->description}}</p>
+            <hr>
+            <div class="metadata">
+                <strong>Type:</strong> {{$comic->type}} <br>
+                <strong>Series</strong> {{$comic->series}} <br>
+                <strong>Price:</strong> {{$comic->price}} <br>
+                <strong>Sale date:</strong> {{$comic->sale_date}}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@endsection
