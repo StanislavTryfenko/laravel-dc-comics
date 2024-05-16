@@ -32,7 +32,7 @@
 
             <div class="mb-3">
                 <label for="thumb" class="form-label">Image</label>
-                <img src="{{ old('thumb', $comic->thumb) }}" alt="">
+                <img src="{{ old('thumb', $comic->thumb) }}" width="50" alt="">
                 <input type="text" class="form-control @error('thumb') is-invalid @enderror" name="thumb"
                     id="thumb" aria-describedby="thumbHelper" value="{{ old('thumb', $comic->thumb) }}" />
                 <small id="thumbHelper" class="form-text text-muted">Type an image URL for the current Comic </small>
