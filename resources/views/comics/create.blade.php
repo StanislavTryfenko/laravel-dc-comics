@@ -43,7 +43,7 @@
 
         <div class="mb-3">
             <label for="sale_date" class="form-label">Sale date</label>
-            <input class="form-control" name="sale_date" id="sale_date" ></input>
+            <input type="date" class="form-control" name="sale_date" id="sale_date" ></input>
             <small id="sale_dateHelper" class="form-text text-muted">Type a sale date for the current Comic </small>
         </div>
 
