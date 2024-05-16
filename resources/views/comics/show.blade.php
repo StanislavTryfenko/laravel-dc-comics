@@ -12,7 +12,7 @@
             <h2>{{$comic->title}}</h2>
             <div class="actions">
                 <a href="{{route('comics.edit', $comic)}}"><i class="fas fa-pencil-alt fa-sm fa-fw"></i></a>
-                <a href="{{route('comics.index')}}"><i class="fas fa-arrow-left fa-sm fa-fw"></i> Back to pastas</a>
+                <a href="{{route('comics.index')}}"><i class="fas fa-arrow-left fa-sm fa-fw"></i> Back to comics</a>
             </div>
             <p>{{$comic->description}}</p>
             <hr>
