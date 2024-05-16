@@ -30,15 +30,17 @@
                 @enderror
             </div>
 
-            <div class="mb-3">
-                <label for="thumb" class="form-label">Image</label>
+            <div class="d-flex gap-2 mb-3">
                 <img src="{{ old('thumb', $comic->thumb) }}" width="50" alt="">
-                <input type="text" class="form-control @error('thumb') is-invalid @enderror" name="thumb"
-                    id="thumb" aria-describedby="thumbHelper" value="{{ old('thumb', $comic->thumb) }}" />
-                <small id="thumbHelper" class="form-text text-muted">Type an image URL for the current Comic </small>
-                @error('thumb')
-                    <div class="alert alert-danger">{{ $message }}</div>
-                @enderror
+                <div>
+                    <label for="thumb" class="form-label">Image</label>
+                    <input type="text" class="form-control @error('thumb') is-invalid @enderror" name="thumb"
+                        id="thumb" aria-describedby="thumbHelper" value="{{ old('thumb', $comic->thumb) }}" />
+                    <small id="thumbHelper" class="form-text text-muted">Type an image URL for the current Comic </small>
+                    @error('thumb')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
+                </div>
             </div>
 
             <div class="mb-3">
