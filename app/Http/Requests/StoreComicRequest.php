@@ -23,7 +23,7 @@ class StoreComicRequest extends FormRequest
     {
         return [
 
-            'title' => 'required|min:3|max:50|',
+            'title' => 'required|min:3|max:50|unique:comics',
             'description' => 'required|min:3|max:4096',
             'thumb' => 'required|min:3|max:255',
             'price' => 'required|max:10',
