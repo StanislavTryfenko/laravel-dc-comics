@@ -63,8 +63,14 @@
                                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
                                                     Close
                                                 </button>
-                                                <button type="button" class="btn btn-danger">Delete <i
-                                                        class="fa fa-trash"></i></button>
+                                                <form action="{{ route('comics.destroy', $comic) }}" method="post">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit" class="btn btn-danger">
+                                                        Delete
+                                                    </button>
+
+                                                </form>
                                             </div>
                                         </div>
                                     </div>
