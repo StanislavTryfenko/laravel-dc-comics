@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Comic;
 use Illuminate\Http\Request;
 
+use App\Http\Requests\StoreComicRequest;
+use App\Http\Requests\UpdateComicRequest;
+
 class ComicsController extends Controller
 {
     /**
@@ -26,11 +29,12 @@ class ComicsController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreComicRequest $request)
     {
         //$data = $request->all();
 
-        $val_data = $request->validate([
+        $val_data = $request->validated();
+        /*  $val_data = $request->validate([
             'title' => 'required|min:3|max:50|',
             'description' => 'required|min:3|max:4096',
             'thumb' => 'required|min:3|max:255',
@@ -38,7 +42,7 @@ class ComicsController extends Controller
             'series' => 'required|min:3|max:50',
             'sale_date' => 'required|date',
             'type' => 'required|min:3|max:50',
-        ]);
+        ]); */
 
 
         /*$newComic = new Comic();
@@ -75,11 +79,12 @@ class ComicsController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Comic $comic)
+    public function update(UpdateComicRequest $request, Comic $comic)
     {
         //dd($request->all());
 
-        $val_data = $request->validate([
+        $val_data = $request->validated();
+        /*  $val_data = $request->validate([
             'title' => 'required|min:3|max:50|',
             'description' => 'required|min:3|max:4096',
             'thumb' => 'required|min:3|max:255',
@@ -87,7 +92,7 @@ class ComicsController extends Controller
             'series' => 'required|min:3|max:50',
             'sale_date' => 'required|date',
             'type' => 'required|min:3|max:50',
-        ]);
+        ]); */
 
         $comic->update($request->all());
 
